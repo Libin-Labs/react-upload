@@ -1,0 +1,63 @@
+{
+  "name": "@lp-labs/react-upload",
+  "version": "0.1.0",
+  "description": "Validated file selection and bounded uploads with progress and cancellation.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/index.js",
+  "browser": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "SECURITY.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "tsc --noEmit",
+    "test": "node --test test/*.test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "test:package": "node scripts/package.mjs",
+    "prepack": "npm run verify",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"test/**/*.{mjs,ts,tsx}\" \"scripts/**/*.mjs\" \"README.md\" \"SECURITY.md\" \"package.json\" \"tsconfig.json\" \".github/workflows/*.yml\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx}\" \"test/**/*.{mjs,ts,tsx}\" \"scripts/**/*.mjs\" \"README.md\" \"SECURITY.md\" \"package.json\" \"tsconfig.json\" \".github/workflows/*.yml\""
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.9.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18.18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "funding": {
+    "type": "paypal",
+    "url": "https://www.paypal.me/LibinPrasanth"
+  },
+  "author": {
+    "name": "Libin Prasanth",
+    "url": "https://www.linkedin.com/in/libinprasanth/"
+  }
+}
